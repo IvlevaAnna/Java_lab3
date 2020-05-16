@@ -8,5 +8,10 @@ public class Student {
         this.labs = labs;
         this.subject = subject;
     }
+    
+    @Override
+    public String toString() {
+        return labs + " labs in " + subject + ".";
+    }
 }
 

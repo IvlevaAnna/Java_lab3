@@ -25,7 +25,8 @@ public class Robot extends Thread {
                 if (!isInterrupted() && !isActive && queue.element().subject.equals(subjectName)) {
                     isActive = true;
                     semaphore.acquire();
-                    System.out.println("Robot is checking " + queue.remove().toString());
+                    System.out.println("Robot is checking " + queue.element().toString());
+                    queue.remove();
                     semaphore.release();
                     isActive = false;
                 }
